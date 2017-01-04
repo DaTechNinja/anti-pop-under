@@ -6,7 +6,7 @@
 // @version      1.0.4
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
-// @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/logo.ico
+// @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/favicon.ico
 // @homepage     https://github.com/DaTechNinja/anti-pop-under
 // @supportURL   https://github.com/DaTechNinja/anti-pop-under/issues
 // @updateURL    https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/anti-pop-under.user.js
