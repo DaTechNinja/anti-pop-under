@@ -3,10 +3,10 @@
 // @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
 // @description  This user script attempts to disable pop-under scripts from working when clicking elements on a site
 // @author       DaTechNinja
-// @version      1.0.3
+// @version      1.0.4
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
-// @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/logo.png
+// @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/logo.ico
 // @homepage     https://github.com/DaTechNinja/anti-pop-under
 // @supportURL   https://github.com/DaTechNinja/anti-pop-under/issues
 // @updateURL    https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/anti-pop-under.user.js
