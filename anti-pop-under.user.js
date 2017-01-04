@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
 // @description  This user script attempts to disable pop-under scripts from working when clicking elements on a site
 // @author       DaTechNinja
-// @version      1.0.1
+// @version      1.0.3
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
 // @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/logo.png
@@ -20,38 +20,42 @@
    DISCLAIMER: The author of this code is not responsible for any potential damages caused by its use.
 */
 
-(function() {
-    'use strict';
+(function ($, undefined) {
+  $(function () {
+     'use strict';
 
     $(document).ready(function() {
-        var options = {
+        var antiPopUnderOptions = {
             'checkIndefinitely': false,      // Whether to check for pop-under script indefinitely or not, default: false
             'maxChecksBeforeStopping': 300,  // Maximum amount of times to check for pop-under script, default: 300
             'checkInterval': 1000            // Interval in milliseconds to check for pop-under script, default: 1000
         };
 
-        var alreadyKilled = false;
-        var checkCount = 0;
+        var popUnderAlreadyKilled = false;
+        var checkCountForPopUnder = 0;
 
         function killPopUnder() {
-            if (!options.checkIndefinitely) {
-                if (++checkCount == options.maxChecksBeforeStopping) {
-                    console.log('Anti Pop-under: Reached max check count of ' + options.maxChecksBeforeStopping + ', stopping...');
+            if (!antiPopUnderOptions.checkIndefinitely) {
+                if (++checkCountForPopUnder == antiPopUnderOptions.maxChecksBeforeStopping) {
+                    console.log('Anti Pop-under: Reached max check count of ' + antiPopUnderOptions.maxChecksBeforeStopping + ', stopping...');
                     return;
                 }
             }
 
-            if (window._wm != 'undefined' && window._wm !== null) {
-                window._wm = null;
-                alreadyKilled = true;
-                console.log('Anti Pop-under: Found and killed pop-under script!');
+            if (typeof window._wm !== 'undefined' && typeof window._wm === 'object') {
+                if (typeof window._wm.format.popunder !== 'undefined' && typeof window._wm.format.popunder === 'object') {
+                    window._wm = 'undefined';
+                    popUnderAlreadyKilled = true;
+                    console.log('Anti Pop-under: Found and killed pop-under script!');
+                }
             }
 
-            if (!alreadyKilled || options.checkIndefinitely) {
-                setTimeout(killPopUnder, options.checkInterval);
+            if (!popUnderAlreadyKilled || antiPopUnderOptions.checkIndefinitely) {
+                setTimeout(killPopUnder, antiPopUnderOptions.checkInterval);
             }
         }
 
         killPopUnder();
     });
-})();
+  });
+})(window.jQuery.noConflict(true));
