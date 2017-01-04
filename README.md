@@ -1,2 +1,3 @@
-# anti-pop-under
-Attempts to disable pop-under scripts working from clicking on elements on a site
+# Anti Pop-under
+
+Attempts to disable pop-under scripts from working when clicking elements on a site.
