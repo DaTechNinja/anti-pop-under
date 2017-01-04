@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anti Pop-under
 // @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
-// @description  Attempts to disable pop-under scripts working from clicking on elements on a site
+// @description  This user script attempts to disable pop-under scripts from working when clicking elements on a site
 // @author       DaTechNinja
 // @version      1.0.1
 // @encoding     utf-8
