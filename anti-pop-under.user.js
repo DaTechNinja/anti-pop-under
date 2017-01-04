@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
 // @description  This user script attempts to disable pop-under scripts from working when clicking elements on a site
 // @author       DaTechNinja
-// @version      1.0.4
+// @version      1.0.5
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
 // @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/favicon.ico
@@ -27,8 +27,8 @@
     $(document).ready(function() {
         var antiPopUnderOptions = {
             'checkIndefinitely': false,      // Whether to check for pop-under script indefinitely or not, default: false
-            'maxChecksBeforeStopping': 300,  // Maximum amount of times to check for pop-under script, default: 300
-            'checkInterval': 1000            // Interval in milliseconds to check for pop-under script, default: 1000
+            'maxChecksBeforeStopping': 10,  // Maximum amount of times to check for pop-under script, default: 10
+            'checkInterval': 1500            // Interval in milliseconds to check for pop-under script, default: 1500
         };
 
         var popUnderAlreadyKilled = false;
