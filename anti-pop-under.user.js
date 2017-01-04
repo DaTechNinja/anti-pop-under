@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Anti Pop-under
-// @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop_Under
+// @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
 // @description  Attempts to disable pop-under scripts working from clicking on elements on a site
 // @author       DaTechNinja
-// @version      1.0.0
+// @version      1.0.1
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
 // @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/logo.png
 // @homepage     https://github.com/DaTechNinja/anti-pop-under
-// @supportURL   https://github.com/DaTechNinja/anti-pop-underissues
+// @supportURL   https://github.com/DaTechNinja/anti-pop-under/issues
 // @updateURL    https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/anti-pop-under.user.js
 // @downloadURL  https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/anti-pop-under.user.js
 // @match        http*://*/*
