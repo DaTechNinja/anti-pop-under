@@ -27,7 +27,7 @@
     $(document).ready(function() {
         var antiPopUnderOptions = {
             'checkIndefinitely': false,      // Whether to check for pop-under script indefinitely or not, default: false
-            'maxChecksBeforeStopping': 10,  // Maximum amount of times to check for pop-under script, default: 10
+            'maxChecksBeforeStopping': 10,   // Maximum amount of times to check for pop-under script, default: 10
             'checkInterval': 1500            // Interval in milliseconds to check for pop-under script, default: 1500
         };
 
