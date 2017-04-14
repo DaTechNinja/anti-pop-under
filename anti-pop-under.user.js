@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/scripts/DaTechNinja/Anti_Pop-under
 // @description  This user script attempts to disable pop-under scripts from working when clicking elements on a site
 // @author       DaTechNinja
-// @version      1.0.5
+// @version      1.0.6
 // @encoding     utf-8
 // @license      https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/LICENSE
 // @icon         https://raw.githubusercontent.com/DaTechNinja/anti-pop-under/master/favicon.ico
@@ -33,6 +33,7 @@
 
         var popUnderAlreadyKilled = false;
         var checkCountForPopUnder = 0;
+        var popUnderObjectNames = ['_wm', '_wm2'];
 
         function killPopUnder() {
             if (!antiPopUnderOptions.checkIndefinitely) {
@@ -42,9 +43,13 @@
                 }
             }
 
-            if (typeof window._wm !== 'undefined' && typeof window._wm === 'object') {
-                if (typeof window._wm.format.popunder !== 'undefined' && typeof window._wm.format.popunder === 'object') {
-                    window._wm = 'undefined';
+            for (var i = 0; i < popUnderObjectNames.length; i++) {
+                if (typeof window[popUnderObjectNames[i]] === 'undefined' && typeof window[popUnderObjectNames[i]] !== 'object') {
+                    continue;
+                }
+                
+                if (typeof window[popUnderObjectNames[i]].format.popunder !== 'undefined' && typeof window[popUnderObjectNames[i]].format.popunder === 'object') {
+                    window[popUnderObjectNames[i]] = 'undefined';
                     popUnderAlreadyKilled = true;
                     console.log('Anti Pop-under: Found and killed pop-under script!');
                 }
